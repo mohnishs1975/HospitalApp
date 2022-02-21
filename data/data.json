@@ -1,1 +1,46 @@
 
+{"devices": [{"device": "blood pressure",
+    "serial_number": "",
+    "issuer": "",
+    "reading": "5",
+    "patient_ID": "1234",
+    "issue_date": "",
+    "status": ""
+},
+{
+    "device": "weight",
+    "serial_number": "",
+    "issuer": "",
+    "reading": "",
+    "patient_ID": "1234",
+    "issue_date": "",
+    "status": ""
+},
+{
+    "device": "glucometer",
+    "serial_number": "",
+    "issuer": "",
+    "reading": "",
+    "patient_ID": "",
+    "issue_date": "",
+    "status": ""
+},
+{
+    "device": "pulse",
+    "serial_number": "",
+    "issuer": "",
+    "reading": "",
+    "patient_ID": "",
+    "issue_date": "",
+    "status": ""
+},
+{
+    "device": "oximeter",
+    "serial_number": "",
+    "issuer": "",
+    "reading": "",
+    "patient_ID": "",
+    "issue_date": "",
+    "status": ""
+}
+]}
