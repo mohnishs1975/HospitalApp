@@ -11,7 +11,7 @@ app = Flask(__name__)
 def hello():
     #it is a good idea to include information on how to use your API on the home route
     text = '''go to /all to see all events
-              and /year/<year> to see events for a particular year'''
+              and /patient_ID/<patient_ID> to see all patients'''
     return render_template('index.html', html_page_text=text)
   
 @app.route("/all")
