@@ -6,3 +6,4 @@
 # Phase 2
 1. Get requests at localhost:5000
 2. Can query existing patients with ID number (e.g. localhost:5000/patient_ID/1234)
+3. Can also be accessed via mohnishsandi.pythonanywhere.com but the service is having trouble processing any requests. 
