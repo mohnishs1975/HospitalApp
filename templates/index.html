@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Patient Records</h1>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Device</th>
+            <th>Date</th>
+            <th>Issuer</th>
+            <th>Reading</th>
+            <th>Status</th>
+            <th>Serial</th>
+            <th>Actions</th>
+        </tr>
+        {% for patient in patients %}
+            <tr>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.device }}</td>
+                <td>{{ patient.issue_date.date() }}</td>
+                <td>{{ patient.issuer }}</td>
+                <td>{{ patient.reading }}</td>
+                <td>{{ patient.status}}</td>
+                <td>{{ patient.serial_number}}</td>
+                <td>
+                    <a href="/delete/{{patient.id}}">Delete</a>
+                    <br>
+                    <a href="/update/{{patient.id}}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+   
+    <form action="/" method="POST">
+        <br><br>
+        <input type="text" name="name" id="name" placeholder="Name"><br>
+        <input list="devices" name="device" id="device" placeholder="Device">
+        <datalist id="devices">
+            <option value="Blood Pressure">
+            <option value="Glucometer">
+            <option value="Oximeter">
+            <option value="Pulse">
+            <option value="Thermometer">
+            <option value="Weight">
+        </datalist><br>
+        <input type="text" name="issuer" id="issuer" placeholder="Issuer"><br>
+        <input type="text" name="reading" id="reading" placeholder="Reading"><br>
+        <input list="stat" name="status" id="status" placeholder="Status"><br>
+        <datalist id="stat">
+            <option value="Active">
+            <option value="Inactive">
+        </datalist>
+        <input type="text" name="serial_number" id="serial_number" placeholder="Serial Number"><br>
+        <input type="submit" value="Add Patient">
+    </form>
+</div>
+{% endblock %}
